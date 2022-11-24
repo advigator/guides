@@ -9,7 +9,7 @@ If you see images in "Logo" or logos in the "Select Images" section then it mean
     {% quick-link title="Sponsored Brand" icon="presets" href="/docs/creative-ads/sponsored-brand" description="Create a Sponsored Brand campaign with a custom image, headline and logo" /%}
 
     {% quick-link title="Sponsored Display" icon="presets" href="/docs/creative-ads/sponsored-display" description="Add a custom image, headline or brand logo to your Sponsored Display campaign" /%}
-
+ 
 
 {% /quick-links %}
 
