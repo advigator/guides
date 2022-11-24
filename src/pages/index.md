@@ -15,7 +15,7 @@ Learn how to use Advigator to grow your business on Amazon {% .lead %}
 
 {% quick-link title="FAQ" icon="theming" href="/docs/faq/eligibility" description="Frequently asked questions" /%}
 
-{% quick-link title="Chrome Extension" icon="lightbulb" href="/extension" description="Chrome Extension to get usefult insights from Amazon web pages" /%}
+{% quick-link title="Chrome Extension" icon="lightbulb" href="/extension" description="Get useful insights from Amazon web pages" /%}
 
 {% /quick-links %}
 
