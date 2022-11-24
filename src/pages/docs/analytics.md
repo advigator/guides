@@ -1,9 +1,9 @@
 ---
 title: Analytics
 ---
-Analyze performance of your advertising campaigns
+Deep dive on data from campaigns managed by Advigator.
 ---
-In Analytics you can deep dive on data from campaigns managed by Advigator.
+
 ## Group data by custom field
 
 You can aggregate data by _account, marketplace, campaign group, campaign type, match type, ad groups etc.._
