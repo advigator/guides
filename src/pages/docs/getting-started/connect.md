@@ -19,7 +19,7 @@ You can either import all marketplaces or only some
 
 ### No profiles found
 - Try logging into {% amazon-console /%}  and verify that you can actually see the campaigns in your Seller/vendor account. 
-- If you have never done a campaign in your life, you should go to {% amazon-console /%}  and create a Sponsored Products campaign. You can choose 1$ of budget, wait for a few impressions and pause it. After that, try reconnecting with Advigator.
+- If you have never created a campaign in your account, you should go to {% amazon-console /%}  and create a Sponsored Products campaign. You can choose 1$ of budget, wait for a few impressions and pause it. After that, try reconnecting with Advigator.
 - If you are a secondary user and got access through 'User Permissions' in Seller Central, you need to make sure you have View / Edit permissions for Campaign Management.
 - Check that you are not using a VPN, ad-blockers, WARP DNS or other tools that obfuscate your IP address
 - Try connecting using [incognito browsing](https://www.youtube.com/results?search_query=How+To+Go+Incognito+On+Google+Chrome)
