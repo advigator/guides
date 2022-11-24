@@ -1,10 +1,10 @@
 ---
 title: Advigator guides
 pageTitle: Guides
-description: Learn how to get Advigator set up your advertising campaigns on Amazon.
+description: Documentation and product guides
 ---
 
-Learn how to get Advigator set up your advertising campaigns on Amazon. {% .lead %}
+Learn how to use Advigator to grow your business on Amazon {% .lead %}
 
 {% quick-links %}
 
@@ -21,5 +21,7 @@ Learn how to get Advigator set up your advertising campaigns on Amazon. {% .lead
 {% /quick-links %}
 
 ---
+
+## Video demo
 
 {% youtube id="HrJoPTxT-JQ" /%}
