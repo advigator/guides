@@ -41,6 +41,16 @@ const tags = {
       <a href="https://www.advigator.com/chrome-extension-for-amazon-seo" target="_blank">Chrome extension</a>
     )
   },
+  'external-link': {
+    selfClosing: true,
+    attributes: {
+      href: { type: String },
+      name: { type: String },
+    },
+    render: ({href, name}) => (
+      <a href={href} target="_blank">{name}</a>
+    )
+  },
   'quick-links': {
     render: QuickLinks,
   },

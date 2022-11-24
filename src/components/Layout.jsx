@@ -54,6 +54,20 @@ const navigation = [
       { title: 'ACoS vs target ACoS', href: '/docs/faq/acos-vs-target' },
       { title: 'Miscellaneous', href: '/docs/faq/miscellaneous' },
     ],
+  },
+  {
+    title: 'Chrome Extension',
+    links: [
+      { title: 'Installation', href: '/extension' },
+      { title: 'SEO Overview', href: '/extension/seo' },
+      { title: 'Images', href: '/extension/images' },
+      { title: 'Keywords', href: '/extension/keywords' },
+      { title: 'Creative Ads', href: '/extension/creative-ads' },
+      { title: 'Brands', href: '/extension/marketshare' },
+      { title: 'Price distribution', href: '/extension/price' },
+      { title: 'Charts', href: '/extension/charts' },
+      { title: 'Export', href: '/extension/export' },
+    ],
   }
 ]
 
