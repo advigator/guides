@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { slugifyWithCounter } from '@sindresorhus/slugify'
-
+import { useRouter } from 'next/router'
 import { Layout } from '@/components/Layout'
 
 import 'focus-visible'
@@ -49,6 +49,8 @@ function collectHeadings(nodes, slugify = slugifyWithCounter()) {
 }
 
 export default function App({ Component, pageProps }) {
+  let router = useRouter()
+
   let title = pageProps.markdoc?.frontmatter.title
 
   let pageTitle =
@@ -66,6 +68,8 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>{pageTitle}</title>
         {description && <meta name="description" content={description} />}
+        <link rel="alternate" hreflang="en" href={`https://guides.advigator.com${router.pathname}`} />
+        <link rel="alternate" hreflang="it" href={`https://it.guides.advigator.com${router.pathname}`} />
       </Head>
       <Layout title={title} tableOfContents={tableOfContents}>
         <Component {...pageProps} />
