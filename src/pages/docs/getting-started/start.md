@@ -1,6 +1,6 @@
 ---
 title: Start campaigns
-description: Connect your Amazon Ads account, so Advigator will be able to create and manage ad campaigns on your behalf.
+description: Connect your Amazon Ads account, so Advigator will be able to create and manage ad campaigns.
 ---
 
 In Advigator, products and campaigns are grouped together in a "Campaign Group." 
