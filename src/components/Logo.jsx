@@ -1,3 +1,6 @@
+import Image from 'next/image'
+
+
 function LogomarkPaths() {
   return (
     <g fill="none" stroke="#38BDF8" strokeLinejoin="round" strokeWidth={3}>
@@ -18,8 +21,8 @@ export function Logomark(props) {
 export function Logo(props) {
   return (
     <div>
-      <img width="140" src="/images/logo.png" className="block dark:hidden" />
-      <img width="140" src="/images/logo-dark.png" className="hidden dark:block" />
+      <Image width="140" height="29" src="/images/logo.png" className="block dark:hidden"/>
+      <Image width="140" height="29" src="/images/logo-dark.png" className="hidden dark:block" />
     </div>
     
   )
