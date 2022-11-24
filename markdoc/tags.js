@@ -1,0 +1,68 @@
+import { Callout } from '@/components/Callout'
+import { QuickLink, QuickLinks } from '@/components/QuickLinks'
+
+const tags = {
+  callout: {
+    attributes: {
+      title: { type: String },
+      type: {
+        type: String,
+        default: 'note',
+        matches: ['note', 'warning'],
+        errorLevel: 'critical',
+      },
+    },
+    render: Callout,
+  },
+  figure: {
+    selfClosing: true,
+    attributes: {
+      src: { type: String },
+      alt: { type: String },
+      caption: { type: String },
+    },
+    render: ({ src, alt = '', caption }) => (
+      <figure>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={src} alt={alt} />
+        <figcaption>{caption}</figcaption>
+      </figure>
+    ),
+  },
+  'amazon-console': {
+    selfClosing: true,
+    render: () => (
+      <a href="https://advertising.amazon.com/" target="_blank">Amazon Ads console</a>
+    )
+  },
+  'chrome-extension': {
+    selfClosing: true,
+    render: () => (
+      <a href="https://www.advigator.com/chrome-extension-for-amazon-seo" target="_blank">Chrome extension</a>
+    )
+  },
+  'quick-links': {
+    render: QuickLinks,
+  },
+  'youtube': {
+    selfClosing: true,
+    attributes: {
+      id: {type: String}
+    },
+    render: ({id}) => (
+      <iframe width="560" height="315" src={`https://www.youtube.com/embed/${id}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    )
+  },
+  'quick-link': {
+    selfClosing: true,
+    render: QuickLink,
+    attributes: {
+      title: { type: String },
+      description: { type: String },
+      icon: { type: String },
+      href: { type: String },
+    },
+  },
+}
+
+export default tags
