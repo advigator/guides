@@ -21,8 +21,8 @@ export function Logomark(props) {
 export function Logo(props) {
   return (
     <div>
-      <Image width="140" height="29" src="/images/logo.png" className="block dark:hidden"/>
-      <Image width="140" height="29" src="/images/logo-dark.png" className="hidden dark:block" />
+      <Image width="140" height="29" src="/images/logo.png" className="block dark:hidden" alt="Logo" />
+      <Image width="140" height="29" src="/images/logo-dark.png" className="hidden dark:block" alt="Logo" />
     </div>
     
   )
