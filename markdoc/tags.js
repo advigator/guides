@@ -60,7 +60,7 @@ const tags = {
       id: {type: String}
     },
     render: ({id}) => (
-      <iframe width="650" height="315" src={`https://www.youtube.com/embed/${id}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe className="aspect-video w-full" height="315"  src={`https://www.youtube.com/embed/${id}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     )
   },
   'quick-link': {
