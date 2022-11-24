@@ -1,6 +1,5 @@
 ---
 title: Advigator guides
-pageTitle: Guides
 description: Documentation and product guides
 ---
 
