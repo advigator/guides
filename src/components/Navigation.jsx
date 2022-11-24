@@ -10,7 +10,7 @@ export function Navigation({ navigation, className }) {
     <nav className={clsx('text-base lg:text-sm', className)}>
 
       <div className='bg-white dark:bg-slate-900 mb-5'>
-        <Search />
+        
       </div>
     
 
