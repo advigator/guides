@@ -2,6 +2,7 @@ import { Head, Html, Main, NextScript } from 'next/document'
 
 const themeScript = `
 
+  <!--- INTERCOM -->
   window.intercomSettings = {
       app_id: "o8nvluwx",
       custom_launcher_selector:'#intercom'
@@ -9,8 +10,9 @@ const themeScript = `
 
   (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/o8nvluwx';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
 
-
+  <!--- WE GLOT -->
   Weglot.initialize({ api_key: 'wg_63225af9b64f15f42e8baf7df8a6087c2' });
+
 
 
   let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)')
@@ -57,7 +59,7 @@ export default function Document() {
         <link rel="alternate" hreflang="en" href="https://guides.advigator.com"/>
         <link rel="alternate" hreflang="it" href="https://it.guides.advigator.com" />
         <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
-        
+
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </Head>
 
