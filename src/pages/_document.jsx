@@ -1,4 +1,5 @@
 import { Head, Html, Main, NextScript } from 'next/document'
+import Script from 'next/script';
 
 const themeScript = `
 
@@ -58,8 +59,7 @@ export default function Document() {
       <Head>
         <link rel="alternate" hreflang="en" href="https://guides.advigator.com"/>
         <link rel="alternate" hreflang="it" href="https://it.guides.advigator.com" />
-        <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
-
+        <Script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </Head>
 
