@@ -53,11 +53,10 @@ const themeScript = `
 `
 
 export default function Document() {
+
   return (
     <Html className="antialiased [font-feature-settings:'ss01']" lang="en">
       <Head>
-        <link rel="alternate" hreflang="en" href="https://guides.advigator.com"/>
-        <link rel="alternate" hreflang="it" href="https://it.guides.advigator.com" />
         <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </Head>
