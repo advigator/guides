@@ -16,4 +16,4 @@ Reach and engage new audiences with custom headlines, videos, and images.
 
 #### Common issues
 
-- [Lifestyle / Logo images](/docs/creative-ads/asset-type)
+- [Lifestyle / Logo images](/docs/creative-ads/asset-type) 
