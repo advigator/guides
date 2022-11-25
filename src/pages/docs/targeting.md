@@ -10,11 +10,12 @@ The targeting is shared across sub-campaigns (Sponsored Products, Sponsored Disp
 
 ---
 ## Negative targeting
-Advigator analyzes the search terms you received clicks from every day to filter out the most relevant ones. However, if in targeting you find a keyword for which the consumer who is searching for it does not actually looking your product then it makes sense to exclude it.
+Negative targeting contains keywords and competitor product pages where you do not want your product to appear. 
+You must use it to exclude keywords from which you do not want to receive traffic because they are irrelevant or misleading with the product you sell.
 
 ### Negative keywords
-
 Any word or keyword can be excluded in exact match or phrase.
+
 - **Phrase match (Recommended)**: Excludes all present and future search terms that contain this word within. For example, if you exclude "iphone" then you will not appear from search terms such as "iphone cover," "iphone glass," "iphone charger," etc. 
     - If you tick "also exclude ASINs" then all competing products that have this word within their title will also be excluded.
 
