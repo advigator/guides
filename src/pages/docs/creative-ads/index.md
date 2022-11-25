@@ -2,7 +2,7 @@
 title: Creative Ads
 description: Upload a custom image or video for your Sponsored Brand Video and Sponsored Display campaign
 ---
-If you see images in "Logo" or logos in the "Select Images" section then it means that you have incorrectly categorized in photos in Amazon Ads Console > Creative Asset. Check that the images refining the product are set as "lifestyle" and only the logos as "logo".
+Reach and engage new audiences with custom headlines, videos, and images.
 
 {% quick-links %}
 
