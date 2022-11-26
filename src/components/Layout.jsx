@@ -107,16 +107,17 @@ function Header({ navigation }) {
           <div className="py-4 border-b border-slate-900/10 lg:px-8 lg:border-0 dark:border-slate-300/10 mx-4 lg:mx-0">
             <div className="relative flex items-center">
 
-            <div className=''>
-              <div className="mr-6 flex lg:hidden">
-                <MobileNavigation navigation={navigation} />
-              </div>
+            
+             
               <div className="relative flex flex-grow basis-0 items-center">
                 <Link href="/" aria-label="Home page">
                   <Logo className="hidden h-9 w-auto fill-slate-700 dark:fill-green-100 lg:block" />
                 </Link>
               </div>
-            </div>
+              <div className="mr-6 flex lg:hidden">
+                <MobileNavigation navigation={navigation} />
+              </div>
+           
 
               <div className="relative hidden lg:flex items-center ml-auto">
                 <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
