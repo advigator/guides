@@ -1,6 +1,6 @@
 ---
 title: Guides
-description: Product guides
+description: Learn how to use Advigator to grow your business on Amazon
 ---
 
 Learn how to use Advigator to grow your business on Amazon {% .lead %}
