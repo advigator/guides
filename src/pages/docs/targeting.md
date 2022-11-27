@@ -60,7 +60,7 @@ Bids per click set by you are not changed by Advigator. So if we see that a keyw
 ## Targeting size
 
 This option changes the criteria by which Advigator filters existing campaign data (Advigator and non-Adigator) to select the most relevant keywords/product pages for Targeting.
-It is the same process you would do by hand when [analyzing the search terms](https://www.youtube.com/results?search_query=amazon+analyze+search+term+reports) report with excel.
+It is the same process you would do by hand when analyzing the search terms report with excel.
 
 ![Targeting size](/images/targeting/strategy.png)
 
