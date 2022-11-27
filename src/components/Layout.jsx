@@ -109,14 +109,15 @@ function Header({ navigation }) {
 
             
              
+              <div className="mr-6 flex lg:hidden">
+                <MobileNavigation navigation={navigation} />
+              </div>
               <div className="relative flex flex-grow basis-0 items-center">
                 <Link href="/" aria-label="Home page">
                   <Logo className="hidden h-9 w-auto fill-slate-700 dark:fill-green-100 lg:block" />
                 </Link>
               </div>
-              <div className="mr-6 flex lg:hidden">
-                <MobileNavigation navigation={navigation} />
-              </div>
+              
            
 
               <div className="relative hidden lg:flex items-center ml-auto">
