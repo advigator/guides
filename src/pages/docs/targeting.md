@@ -11,7 +11,7 @@ The targeting is shared across sub-campaigns (Sponsored Products, Sponsored Disp
 ---
 ## Negative targeting
 Negative targeting contains keywords and competitor product pages where you do not want your product to appear. 
-You can use it to exclude keywords from which you do not want to receive traffic because they are irrelevant or misleading with the product you sell.
+You can use it to exclude keywords that are irrelevant or misleading with the product you sell.
 
 ### Negative keywords
 Any word or keyword can be excluded in exact match or phrase.
