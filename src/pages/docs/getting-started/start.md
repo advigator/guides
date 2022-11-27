@@ -6,7 +6,7 @@ description: Connect your Amazon Ads account, so Advigator will be able to creat
 In Advigator, products and campaigns are grouped together in a "Campaign Group." 
 You manage activation, budget, and keywords at the group level, and Advigator will replicate operations on individual sub campaigns. 
 
-By default, variations of a product (and any other products with the exact same title) are grouped in the same "Campaign Group." You can change this setting, but it is the recommended one in most cases.
+By default, variations of a product are grouped in the same "Campaign Group." You can change this setting, but it is the recommended one in most cases.
 
 ![Campaign group](/images/getting-started/item_groups_text.png)
 
