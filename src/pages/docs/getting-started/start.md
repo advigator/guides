@@ -28,5 +28,3 @@ Advigator does not manage your existing campaigns but analyzes their historical 
 If you don't feel comfortable closing your campaigns immediately, then reduce their daily budget.
 {% /callout %}
 
-
-
