@@ -32,11 +32,7 @@ Keep in mind that sometimes users may be interested in your product coming from 
 
 ## Add new keywords
 
-You can add new keywords in addition to those in Targeting by going to Targeting > custom.
-
-![Custom keywords](/images/targeting/custom.png)
-
-Then enter your keywords one per line
+You can add more keywords in Targeting by going to Targeting > custom targeting and enter your keywords one per line
 
 ![Custom keywords](/images/targeting/custom-keywords.png)
 
@@ -88,7 +84,7 @@ Bids are staggered downward. So phrase matching has a lower bid than exact, and 
 
 If for what reason you don't want to have phrase or broad matches then uncheck from Targeting > Settings > match types.
 
-![Targeting settings match type](/images/targeting/match_type.png)
+![Targeting settings match type](/images/targeting/match-type.png)
 
 ### Dynamic expression and keyword research
 
@@ -110,4 +106,4 @@ For example, if the campaigns group promote products A, B, C then we read data f
 
 However, if you are absolutely certain that this campaign promotes an identical product (e.g., the previous version that changed the parent asin) then you can manually tell it to read its historical data.
 
-![Targeting settings campaigns data](/images/targeting/campaigns_data.png)
+![Targeting settings campaigns data](/images/targeting/campaigns-data.png)

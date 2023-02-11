@@ -8,7 +8,7 @@ You manage activation, budget, and keywords at the group level, and Advigator wi
 
 By default, variations of a product are grouped in the same "Campaign Group." You can change this setting, but it is the recommended one in most cases.
 
-![Campaign group](/images/getting-started/item_groups_text.png)
+![Campaign group](/images/getting-started/item_groups.png)
 
 ## Start campaign group
 

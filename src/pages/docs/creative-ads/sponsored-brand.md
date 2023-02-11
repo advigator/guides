@@ -13,11 +13,7 @@ This is an example of a [Sponsored Brand](https://advertising.amazon.com/en-us/s
 
 Let's start by enabling the "Sponsored Brand" format.
 
-![Activate Sponsored Brand in Advigator](/images/creative-ads/sponsored-brand/checkbox.png)
-
-then go to Creative Ads > Add Sponsored Brand
-
-![Activate Sponsored Brand creative ad in Advigator](/images/creative-ads/sponsored-brand/creative_button.png)
+![Activate Sponsored Brand in Advigator](/images/creative-ads/sponsored-brand/sb-checkbox.png)
 
 ## Select a custom image
 
@@ -25,8 +21,6 @@ Here you will be able to see lifestyle images uploaded from "Amazon Creative Ass
 You can add new images by going to {% amazon-console /%} and save them as "Lifestyle images" or by clicking on "Upload a new file." in Advigator.
 
 Click "Skip custom image" if you want to proceed without a custom image. 
-
-![Gallery](/images/creative-ads/sponsored-brand/gallery.png)
 
 ## Logo, headline and ASIN
 
@@ -37,15 +31,11 @@ The headline should be relevant with the product and image, and not use pressuri
 
 No ideas for headline? {% chrome-extension /%} and get inspiration from other similar products. 
 
-![Gallery](/images/creative-ads/sponsored-brand/headline.png)
-
 
 ## Review and send for approval
 
 Review your creative and send it for approval to Amazon. 
 The Amazon moderation team will review it within 24 hours. 
-
-![Review](/images/creative-ads/sponsored-brand/review.png)
 
 If approved, your ad creative will automatically be active in your sponsored Brand campaign, otherwise you will receive an email with the reason for rejection. 
 If rejected you will have to delete the creative and create a new one that meets Amazon Ads guidelines

@@ -6,21 +6,19 @@ Bulk operations allow you to apply the same change to multiple campaign groups a
 
 ---
 
-![Bulk operations](/images/bulk-operations/button.png)
-
 ## Enabling all products in a category
 
 1. Choose products by category, brand or title
 2. Check off the products you are interested in
 3. Go to State, check _enable_ and confirm
 
-![Bulk operations state](/images/bulk-operations/state.gif)
+![Bulk operations state](/images/bulk-operations/bulk-operations.png)
 
 You can do the same to pause, change the budget or target ACoS etc..
 
 ## Negative keywords to multiple products
 
-![Bulk operations negative](/images/bulk-operations/negative.gif)
+![Bulk operations negative](/images/bulk-operations/negative-targeting.png)
 
 1. Choose products by category, brand or title
 2. Check off the products you are interested in

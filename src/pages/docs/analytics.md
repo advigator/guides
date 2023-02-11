@@ -32,7 +32,7 @@ The Sponsored Products (SP) Auto campaign, and all keyword as phrase/broad match
 
 For example, the keyword "iphone cover" as phrase match reaches consumers searching for _iphone cover red_ or _waterproof iphone cover._  
 These new search terms may not be in Targeting because they have not yet led to orders (or low CTR) but have generated spend so far. 
-If you want to isolate them, go to _custom > new search terms_
+If you want to isolate them, go to _filter > only SP AUTO + Phrase/Broad_
 
 ![Analytics new search term](/images/analytics/new-search-terms.png)
 
@@ -43,9 +43,4 @@ Here the most common action is to look for keywords or subwords that are not rel
 You may be tempted to exclude keywords that have not led to orders or that have a high ACoS. Don't do it. For these keywords Advigator has already reduced the bid per click. 
 Just ask yourself if the consumer who is searching for that search term might actually want your product.
 
-### Search terms excluded by negative keywords
-
-With this filter, you see all the search terms that have generated clicks in the past and will henceforth be excluded from the negative keywords you have entered.
-
-![Analytics excluded search term](/images/analytics/excluded-terms.png)
 

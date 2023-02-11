@@ -53,6 +53,7 @@ const navigation = [
       { title: 'No checkbox for SB', href: '/docs/faq/brand-registry' },
       { title: 'ACoS vs target ACoS', href: '/docs/faq/acos-vs-target' },
       { title: 'Miscellaneous', href: '/docs/faq/miscellaneous' },
+      { title: 'Design migration', href: '/docs/faq/design-migration' },
     ],
   },
   {

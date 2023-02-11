@@ -31,8 +31,6 @@ You may have entered keywords that are not relevant to your product because they
 If the product is new, and there are no keywords in the Targeting section, then it makes sense to add 3-4 keywords to start. Check that the keywords you add actually relate to your product. Try to simulate a search on Amazon, you should expect search results like your product. 
 Avoid adding keywords that refer to complementary products if you want to focus on ACoS (sales efficiency). 
 
-![custom keywords](/images/faq/acos/custom_keywords.png)
-
 ## Custom keywords with fixed bid
 
 If you add custom keywords with a fixed bid you need to know that Advigator will never go to change that bid because it prioritizes your actions. 
