@@ -1,5 +1,5 @@
 ---
-title: New design guide
+title: What's new about the redesign
 ---
 
 In February 2023 we redesigned the user interface (UI). Here is a guide of main changes:
