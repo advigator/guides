@@ -130,11 +130,9 @@ function Header({ navigation }) {
                     <li>
                       <a href="https://dashboard.advigator.com/" className="hover:text-green-500 dark:hover:text-green-400">Dashboard</a>
                     </li>
-
                     <li>
-                    <ThemeSelector className="relative z-10" />
+                      <ThemeSelector className="relative z-10" />
                     </li>
-            
                   </ul>
                 </nav>
               </div>
@@ -196,6 +194,11 @@ function useTableOfContents(tableOfContents) {
 
 export function Layout({ children, title, tableOfContents }) {
   let router = useRouter()
+  
+  // You can access locale
+  //const { locale, defaultLocale, locales } = useRouter()
+
+
   let isHomePage = router.pathname === '/'
   let allLinks = navigation.flatMap((section) => section.links)
   let linkIndex = allLinks.findIndex((link) => link.href === router.pathname)
@@ -221,7 +224,6 @@ export function Layout({ children, title, tableOfContents }) {
       <Header navigation={navigation} />
 
       {/* {isHomePage && <Hero />} */}
-
 
       <div className="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
         <div className="hidden lg:relative lg:block lg:flex-none">
