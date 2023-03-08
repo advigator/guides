@@ -24,5 +24,3 @@ Learn how to use Advigator to grow your business on Amazon {% .lead %}
 ## Video demo
 
 {% youtube id="HrJoPTxT-JQ" /%}
-
-{% partial file="index.fr.md" /%}

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { slugifyWithCounter } from '@sindresorhus/slugify'
 import { useRouter } from 'next/router'
+import { IntlProvider } from 'react-intl'
 import { Layout } from '@/components/Layout'
 
 import 'focus-visible'
@@ -59,21 +60,65 @@ export default function App({ Component, pageProps }) {
 
   let description = pageProps.markdoc?.frontmatter.description
 
-  let tableOfContents = pageProps.markdoc?.content
-    ? collectHeadings(pageProps.markdoc.content)
-    : []
+  let content_en = []
+  let content_fr = []
+
+  for (let i = 0; i < 10; i++) {
+    if (i < 5) content_en.push(pageProps.markdoc?.content[i])
+    else content_fr.push(pageProps.markdoc?.content[i])
+  }
+
+  let content = router.locale === 'en' ? content_en : content_fr
+
+  let tableOfContents = content.length ? collectHeadings(content) : []
+
+  let propContent = {}
+
+  propContent =
+    router.locale === 'en'
+      ? {
+          markdoc: {
+            content: content_en,
+            file: { path: '\\index.md' },
+            frontmatter: {
+              title: 'Guides',
+              description:
+                'Learn how to use Advigator to grow your business on Amazon',
+            },
+          },
+        }
+      : {
+          markdoc: {
+            content: content_fr,
+            file: { path: '\\index.fr.md' },
+            frontmatter: {
+              title: 'Guides',
+              description:
+                'Apprenez à utiliser Advigator pour développer votre activité sur Amazon',
+            },
+          },
+        }
 
   return (
-    <>
+    <IntlProvider locale={router.locale}>
       <Head>
         <title>{pageTitle}</title>
         {description && <meta name="description" content={description} />}
-        <link rel="alternate" hreflang="en" href={`https://guides.advigator.com${router.pathname}`} />
-        <link rel="alternate" hreflang="it" href={`https://it.guides.advigator.com${router.pathname}`} />
+        <link rel="alternate" hrefLang="en" href={`https://localhost:8080/`} />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href={`https://localhost:8080/en`}
+        />
+        <link
+          rel="alternate"
+          hrefLang="fr"
+          href={`https://localhost:8080/fr`}
+        />
       </Head>
       <Layout title={title} tableOfContents={tableOfContents}>
-        <Component {...pageProps} />
+        <Component {...propContent} />
       </Layout>
-    </>
+    </IntlProvider>
   )
 }

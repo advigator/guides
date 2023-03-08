@@ -2,6 +2,8 @@ import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import clsx from 'clsx'
+import { FormattedMessage, useIntl } from 'react-intl'
+import { Dropdown } from '@nextui-org/react'
 
 import { Hero } from '@/components/Hero'
 import { Logo, Logomark } from '@/components/Logo'
@@ -17,7 +19,6 @@ const navigation = [
       { title: 'Getting started', href: '/' },
       { title: 'Connect Amazon Ads', href: '/docs/getting-started/connect' },
       { title: 'Start campaigns', href: '/docs/getting-started/start' },
-      
     ],
   },
   {
@@ -27,7 +28,6 @@ const navigation = [
       { title: 'Target ACoS%', href: '/docs/target-acos' },
       { title: 'Daily budget', href: '/docs/daily-budget' },
       { title: 'Creative ads', href: '/docs/creative-ads' },
-      
     ],
   },
   {
@@ -40,10 +40,22 @@ const navigation = [
   {
     title: 'Understanding',
     links: [
-      { title: 'Campaign structure', href: '/docs/understanding/campaign-structure' },
-      { title: 'Bid per click formula', href: '/docs/understanding/bid-formula' },
-      { title: 'Automated report analysis', href: '/docs/understanding/reports' },
-      { title: 'Budget allocation', href: '/docs/understanding/budget-allocation' },
+      {
+        title: 'Campaign structure',
+        href: '/docs/understanding/campaign-structure',
+      },
+      {
+        title: 'Bid per click formula',
+        href: '/docs/understanding/bid-formula',
+      },
+      {
+        title: 'Automated report analysis',
+        href: '/docs/understanding/reports',
+      },
+      {
+        title: 'Budget allocation',
+        href: '/docs/understanding/budget-allocation',
+      },
     ],
   },
   {
@@ -69,7 +81,7 @@ const navigation = [
       { title: 'Charts', href: '/extension/charts' },
       { title: 'Export', href: '/extension/export' },
     ],
-  }
+  },
 ]
 
 function GitHubIcon(props) {
@@ -81,6 +93,7 @@ function GitHubIcon(props) {
 }
 
 function Header({ navigation }) {
+  let router = useRouter()
   let [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
@@ -103,48 +116,60 @@ function Header({ navigation }) {
           : 'dark:bg-transparent'
       )}
     >
+      <div className="mx-auto max-w-8xl">
+        <div className="mx-4 border-b border-slate-900/10 py-4 dark:border-slate-300/10 lg:mx-0 lg:border-0 lg:px-8">
+          <div className="relative flex items-center">
+            <div className="mr-6 flex lg:hidden">
+              <MobileNavigation navigation={navigation} />
+            </div>
+            <div className="relative flex flex-grow basis-0 items-center">
+              <Link href="/" aria-label="Home page">
+                <Logo className="hidden h-9 w-auto fill-slate-700 dark:fill-green-100 lg:block" />
+              </Link>
+            </div>
 
-        <div className="max-w-8xl mx-auto">
-          <div className="py-4 border-b border-slate-900/10 lg:px-8 lg:border-0 dark:border-slate-300/10 mx-4 lg:mx-0">
-            <div className="relative flex items-center">
-
-            
-             
-              <div className="mr-6 flex lg:hidden">
-                <MobileNavigation navigation={navigation} />
-              </div>
-              <div className="relative flex flex-grow basis-0 items-center">
-                <Link href="/" aria-label="Home page">
-                  <Logo className="hidden h-9 w-auto fill-slate-700 dark:fill-green-100 lg:block" />
-                </Link>
-              </div>
-              
-           
-
-              <div className="relative hidden lg:flex items-center ml-auto">
-                <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
-                  <ul className="flex space-x-8">
-                    <li>
-                      <a className="hover:text-green-500 dark:hover:text-green-400" href="https://www.advigator.com/">Advigator.com</a>
-                    </li>
-                    <li>
-                      <a href="https://dashboard.advigator.com/" className="hover:text-green-500 dark:hover:text-green-400">Dashboard</a>
-                    </li>
-                    <li>
-                      <ThemeSelector className="relative z-10" />
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-              
-              
-             
+            <div className="relative ml-auto hidden items-center lg:flex">
+              <nav className="text-sm font-semibold leading-6 text-slate-700 dark:text-slate-200">
+                <ul className="flex items-center space-x-8">
+                  <li>
+                    <Dropdown>
+                      <Dropdown.Button flat>Language</Dropdown.Button>
+                      <Dropdown.Menu
+                        onAction={(key) => {
+                          key === 'en' ? router.push('/en') : router.push('/fr')
+                        }}
+                        aria-label="Static Actions"
+                      >
+                        <Dropdown.Item key="en">English</Dropdown.Item>
+                        <Dropdown.Item key="fr">France</Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </li>
+                  <li>
+                    <a
+                      className="hover:text-green-500 dark:hover:text-green-400"
+                      href="https://www.advigator.com/"
+                    >
+                      Advigator.com
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://dashboard.advigator.com/"
+                      className="hover:text-green-500 dark:hover:text-green-400"
+                    >
+                      Dashboard
+                    </a>
+                  </li>
+                  <li>
+                    <ThemeSelector className="relative z-10" />
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
-      
-    
-      
+      </div>
     </header>
   )
 }
@@ -193,11 +218,12 @@ function useTableOfContents(tableOfContents) {
 }
 
 export function Layout({ children, title, tableOfContents }) {
-  let router = useRouter()
-  
+  const router = useRouter()
+
+  const intl = useIntl()
+
   // You can access locale
   //const { locale, defaultLocale, locales } = useRouter()
-
 
   let isHomePage = router.pathname === '/'
   let allLinks = navigation.flatMap((section) => section.links)
