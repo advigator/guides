@@ -11,7 +11,7 @@ const nextConfig = {
     localeDetection: true,
     // These are all the locales you want to support in
     // your application
-    locales: ['en', 'it', 'fr'],
+    locales: ['en', 'it'],
     // This is the default locale you want to be used when visiting
     // a non-locale prefixed path e.g. `/hello`
     defaultLocale: 'en',
