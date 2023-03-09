@@ -3,8 +3,6 @@ title: Guides
 description: Learn how to use Advigator to grow your business on Amazon
 ---
 
-Learn how to use Advigator to grow your business on Amazon {% .lead %}
-
 {% quick-links %}
 
 {% quick-link title="Getting started" icon="installation" href="/docs/getting-started/start" description="Step-by-step guides to start campaigns" /%}
@@ -23,4 +21,4 @@ Learn how to use Advigator to grow your business on Amazon {% .lead %}
 
 ## Video demo
 
-{% youtube id="HrJoPTxT-JQ" /%}  
+{% youtube id="HrJoPTxT-JQ" /%}

@@ -2,9 +2,11 @@ import Head from 'next/head'
 import { slugifyWithCounter } from '@sindresorhus/slugify'
 import { useRouter } from 'next/router'
 import { Layout } from '@/components/Layout'
+import { RenameToEn, RenameToFr } from './service.js'
 
 import 'focus-visible'
 import '@/styles/tailwind.css'
+import { useEffect } from 'react'
 
 function getNodeText(node) {
   let text = ''
@@ -50,6 +52,7 @@ function collectHeadings(nodes, slugify = slugifyWithCounter()) {
 
 export default function App({ Component, pageProps }) {
   let router = useRouter()
+  // getStaticPaths(router.locale)
 
   let title = pageProps.markdoc?.frontmatter.title
 
@@ -68,12 +71,20 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>{pageTitle}</title>
         {description && <meta name="description" content={description} />}
-        <link rel="alternate" hreflang="en" href={`https://guides.advigator.com${router.pathname}`} />
-        <link rel="alternate" hreflang="it" href={`https://it.guides.advigator.com${router.pathname}`} />
+        <link rel="alternate" hrefLang="en" href={`https://localhost:8080`} />
+        <link
+          rel="alternate"
+          hrefLang="fr"
+          href={`https://localhost:8080/fr`}
+        />
       </Head>
       <Layout title={title} tableOfContents={tableOfContents}>
         <Component {...pageProps} />
       </Layout>
     </>
   )
+}
+async function getStaticPaths(lang = 'en') {
+  if (lang === 'en') RenameToEn()
+  else RenameToFr()
 }
