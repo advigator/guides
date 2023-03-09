@@ -14,7 +14,6 @@ const themeScript = `
   Weglot.initialize({ api_key: 'wg_63225af9b64f15f42e8baf7df8a6087c2' });
 
 
-
   let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)')
 
   function updateTheme(theme) {
@@ -59,6 +58,9 @@ export default function Document() {
       <Head>
         <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="84362880-a9b6-4031-8dd5-59099934f7bb" async></script>
+
+
       </Head>
 
       <body className="bg-white dark:bg-slate-900">

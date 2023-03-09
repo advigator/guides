@@ -59,9 +59,10 @@ export default function App({ Component, pageProps }) {
 
   let description = pageProps.markdoc?.frontmatter.description
 
-  let tableOfContents = pageProps.markdoc?.content
-    ? collectHeadings(pageProps.markdoc.content)
-    : []
+  // let tableOfContents = pageProps.markdoc?.content
+  //   ? collectHeadings(pageProps.markdoc.content)
+  //   : []
+  let tableOfContents = []
 
   return (
     <>
