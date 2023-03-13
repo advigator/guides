@@ -203,9 +203,12 @@ function useTableOfContents(tableOfContents) {
 
 export function Layout({ children, title, tableOfContents }) {
   let router = useRouter()
+<<<<<<< HEAD
   //const { locale, defaultLocale, locales } = useRouter()
 
 
+=======
+>>>>>>> parent of ffcbbf2 (ready for i18n)
   let isHomePage = router.pathname === '/'
   let allLinks = navigation.flatMap((section) => section.links)
 
