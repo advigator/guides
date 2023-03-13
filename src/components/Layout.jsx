@@ -9,14 +9,17 @@ import { MobileNavigation } from '@/components/MobileNavigation'
 import { Navigation } from '@/components/Navigation'
 import { Prose } from '@/components/Prose'
 import { ThemeSelector } from '@/components/ThemeSelector'
+import LocaleSwitcher from '@/components/LocaleSwitcher'
+
+
 
 const navigation = [
   {
     title: 'Introduction',
     links: [
-      { title: 'Getting started', href: '/' },
+      { title: 'Getting started', href: '/index' },
       { title: 'Connect Amazon Ads', href: '/docs/getting-started/connect' },
-      { title: 'Start campaigns', href: '/docs/getting-started/start' },
+      { title: 'Start campaigns', href: ('/docs/getting-started/start' )},
       
     ],
   },
@@ -123,7 +126,11 @@ function Header({ navigation }) {
 
               <div className="relative hidden lg:flex items-center ml-auto">
                 <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
-                  <ul className="flex space-x-8">
+                  <ul className="flex space-x-8 items-center">
+
+                    <li>
+                      <LocaleSwitcher />
+                    </li>
                     <li>
                       <a className="hover:text-green-500 dark:hover:text-green-400" href="https://www.advigator.com/">Advigator.com</a>
                     </li>
@@ -194,14 +201,15 @@ function useTableOfContents(tableOfContents) {
 
 export function Layout({ children, title, tableOfContents }) {
   let router = useRouter()
-  
-  // You can access locale
   //const { locale, defaultLocale, locales } = useRouter()
 
 
   let isHomePage = router.pathname === '/'
   let allLinks = navigation.flatMap((section) => section.links)
+
   let linkIndex = allLinks.findIndex((link) => link.href === router.pathname)
+
+
   let previousPage = allLinks[linkIndex - 1]
   let nextPage = allLinks[linkIndex + 1]
   let section = navigation.find((section) =>

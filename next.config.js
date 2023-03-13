@@ -21,4 +21,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withMarkdoc()(nextConfig)
+module.exports = withMarkdoc({ schemaPath: './src/pages' })(nextConfig)

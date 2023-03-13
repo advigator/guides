@@ -1,4 +1,4 @@
-import { Head, Html, Main, NextScript } from 'next/document'
+import Document,  { Head, Html, Main, NextScript } from 'next/document'
 
 const themeScript = `
 
@@ -51,22 +51,54 @@ const themeScript = `
   isDarkMode.addEventListener('change', () => updateThemeWithoutTransitions())
 `
 
-export default function Document() {
+class MyDocument extends Document {
 
-  return (
-    <Html className="antialiased [font-feature-settings:'ss01']" lang="en">
-      <Head>
-        <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js" />
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        <script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="84362880-a9b6-4031-8dd5-59099934f7bb" async></script>
+  static async getInitialProps(ctx) {
+    const originalRenderPage = ctx.renderPage
 
 
-      </Head>
+    console.log("Locale: ", ctx.locale)
+  
 
-      <body className="bg-white dark:bg-slate-900">
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  )
+    // Run the React rendering logic synchronously
+    ctx.renderPage = () =>
+      originalRenderPage({
+        // Useful for wrapping the whole react tree
+        enhanceApp: (App) => (props) => {
+            let pageProps = props.pageProps;
+
+            //console.log("props", pageProps.markdoc.file)
+            return <App {...props} />
+        },
+        // Useful for wrapping in a per-page basis
+        enhanceComponent: (Component) => Component,
+      })
+
+    // Run the parent `getInitialProps`, it now includes the custom `renderPage`
+    const initialProps = await Document.getInitialProps(ctx)
+
+
+    return initialProps
+  }
+
+  render() {
+
+    return (
+      <Html className="antialiased [font-feature-settings:'ss01']" lang="en">
+        <Head>
+          <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js" />
+          <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+          <script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="84362880-a9b6-4031-8dd5-59099934f7bb" async></script>
+        </Head>
+
+        <body className="bg-white dark:bg-slate-900">
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
+
+  }
 }
+
+export default MyDocument
