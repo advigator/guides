@@ -17,7 +17,7 @@ const navigation = [
   {
     title: 'Introduction',
     links: [
-      { title: 'Getting started', href: '/index' },
+      { title: 'Getting started', href: '/' },
       { title: 'Connect Amazon Ads', href: '/docs/getting-started/connect' },
       { title: 'Start campaigns', href: ('/docs/getting-started/start' )},
       
@@ -137,9 +137,11 @@ function Header({ navigation }) {
                     <li>
                       <a href="https://dashboard.advigator.com/" className="hover:text-green-500 dark:hover:text-green-400">Dashboard</a>
                     </li>
+
                     <li>
-                      <ThemeSelector className="relative z-10" />
+                    <ThemeSelector className="relative z-10" />
                     </li>
+            
                   </ul>
                 </nav>
               </div>
@@ -232,6 +234,7 @@ export function Layout({ children, title, tableOfContents }) {
       <Header navigation={navigation} />
 
       {/* {isHomePage && <Hero />} */}
+
 
       <div className="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
         <div className="hidden lg:relative lg:block lg:flex-none">
