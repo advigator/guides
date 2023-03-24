@@ -9,7 +9,6 @@ import { MobileNavigation } from '@/components/MobileNavigation'
 import { Navigation } from '@/components/Navigation'
 import { Prose } from '@/components/Prose'
 import { ThemeSelector } from '@/components/ThemeSelector'
-//import LocaleSwitcher from '@/components/LocaleSwitcher'
 
 
 
