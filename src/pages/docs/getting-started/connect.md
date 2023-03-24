@@ -2,11 +2,6 @@
 title: Connect Amazon Ads
 description: Connect your Amazon Ads account, so Advigator will be able to create and manage ad campaigns
 ---
-
-
-
-## Select a geographic area
-
 Choose your geographic area and click on ‘login with Amazon’. You will be redirected to Amazon Advertising to link your Amazon Advertising account.
 
 ![Connect Amazon Ads](/images/getting-started/connect.png)

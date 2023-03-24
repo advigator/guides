@@ -7,8 +7,6 @@ The daily budget in Advigator is chosen at the campaign group level. Advigator w
 
 ---
 
-## Deciding the budget  
-
 We recommend starting with what you are already used to spending on that product. If the product is new $5-30 per day should be enough.
 
 Given a Target ACoS, the daily budget may not be enough to keep campaigns active for the entire day. In such case, you will see a warning alert like this: 
