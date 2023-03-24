@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/"
+  to = "https://dashboard.advigator.com/en/guides"
+  status = 301
